@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consultas Armando</title>
+    <title>Mostrador de Precios</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/sweetalert2.min.css" />
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
     <div class="p-5 bg-light" id="app">
       <div class="container">
-        <h1 class="display-6 text-center">Consultar Articulo</h1>
+        <h1 class="display-6 text-center">Consultar Precio</h1>
         <p class="lead">Codigo de Barras:</p>
         <div class="mb-3">
           <input
@@ -29,7 +29,7 @@
           />
           <small id="helpId" class="form-text text-muted">{{ message }}</small>
         </div>
-     
+
         <hr />
         <div class="container" v-if="product.length > 0">
           <div class="row">
@@ -37,27 +37,29 @@
               <div class="mb-3">
                 <div class="card">
                   <div class="card-body">
-                    <h1 class="display-3 card-title text-center mt-4 mb-5"   >
+                    <h1 class="display-3 card-title text-center mt-4 mb-5">
                       {{ product[0].name }}
-                    </h1>  
-                    
+                    </h1>
+
                     <div class="row mt-5">
                       <div class="col-6">
-                        <h3 class=" display-4  card-text text-center">
-                          Precio: {{ formatNumber( 'VED' , product[0].pricesell) }} Bs.
+                        <h3 class="display-4 card-text text-center">
+                          Precio: {{ formatNumber( 'VED' , product[0].pricesell)
+                          }} Bs.
                         </h3>
                       </div>
 
-                    
                       <div class="col-6">
-                        <h3 class="display-4  card-text text-center">
-                          Ref: {{ formatNumber( 'USD' , product[0].priceusdsale ) }}
+                        <h3 class="display-4 card-text text-center">
+                          Ref: {{ formatNumber( 'USD' , product[0].priceusdsale
+                          ) }}
                         </h3>
                       </div>
                     </div>
                     <div align="center">
-                      <br> <br>
-                      <svg id="code" > </svg>
+                      <br />
+                      <br />
+                      <svg id="code"></svg>
                     </div>
                   </div>
                 </div>
