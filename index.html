@@ -31,28 +31,28 @@
         </div>
 
         <hr />
-        <div class="container" v-if="product.length > 0">
+        <div class="container" v-if="product.code">
           <div class="row">
             <div class="col-12">
               <div class="mb-3">
                 <div class="card">
                   <div class="card-body">
                     <h1 class="display-3 card-title text-center mt-4 mb-5">
-                      {{ product[0].name }}
+                      {{ product.name }}
                     </h1>
 
                     <div class="row mt-5">
                       <div class="col-6">
                         <h3 class="display-4 card-text text-center">
-                          Precio: {{ formatNumber( 'VED' , product[0].pricesell)
-                          }} Bs.
+                          Precio: {{ formatNumber( 'VED' ,
+                          product.price_with_tax) }} Bs.
                         </h3>
                       </div>
 
                       <div class="col-6">
                         <h3 class="display-4 card-text text-center">
-                          Ref: {{ formatNumber( 'USD' , product[0].priceusdsale
-                          ) }}
+                          Ref: $ {{ formatNumber( 'USD' ,
+                          product.priceusd_withtax ) }}
                         </h3>
                       </div>
                     </div>
@@ -76,7 +76,6 @@
     <script src="./js/vue-meta.js"></script>
     <script src="./js/sweetalert2.all.min.js"></script>
     <script src="./js/JsBarcode.all.min.js"></script>
-    <script src="./js/helpers.js"></script>
     <script src="./js/products.js"></script>
   </body>
 </html>
