@@ -1,4 +1,4 @@
-# Habladores
+# Price Tag Display / Mostrador de Precios
 
 ![Img](/img.png)
 
